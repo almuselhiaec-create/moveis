@@ -13,7 +13,7 @@ const UpdateMovie = () => {
     const fetchMovieData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:4001/getMovie/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/getMovie/${id}`);
         setMovieData(response.data.movie);
       } catch (error) {
         setMsg("Error fetching movie data.");
@@ -33,7 +33,7 @@ const UpdateMovie = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.put(`http://localhost:4001/updateMovie/${id}`, movieData);
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/updateMovie/${id}`, movieData);
       setMsg(response.data.msg);
       setTimeout(() => navigate("/Movies"), 1500);
     } catch (error) {

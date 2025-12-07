@@ -14,7 +14,7 @@ const Movies = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/getMovies");
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/getMovies`);
         setMovies(response.data.movies);
       } catch (error) {
         setErrorMsg("Error fetching movies. Please try again.");
@@ -38,7 +38,7 @@ const Movies = () => {
 
   const deleteMovie = async (movieId) => {
     try {
-      await axios.delete(`http://localhost:4001/deleteMovie/${movieId}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/deleteMovie/${movieId}`);
       setMovies(movies.filter((movie) => movie._id !== movieId));
       setErrorMsg("Movie deleted successfully!");
     } catch (error) {
@@ -74,10 +74,7 @@ const Movies = () => {
                     <Link to={`/updateMovie/${movie._id}`} className="edit-button">
                       Edit
                     </Link>
-                    <button
-                      onClick={() => deleteMovie(movie._id)}
-                      className="delete-button"
-                    >
+                    <button onClick={() => deleteMovie(movie._id)} className="delete-button">
                       Delete
                     </button>
                   </td>

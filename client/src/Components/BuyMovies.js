@@ -11,14 +11,13 @@ const BuyMovies = () => {
   const user = useSelector((state) => state.user.user);
 
   useEffect(() => {
-    axios.get("http://localhost:4001/getMovies").then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/getMovies`).then((res) => {
       setMovies(res.data.movies);
     });
   }, []);
 
   const toggleSelect = (movie) => {
     let updated;
-
     if (selected.includes(movie)) {
       updated = selected.filter((m) => m !== movie);
     } else {
@@ -32,15 +31,17 @@ const BuyMovies = () => {
   const handleBuy = async () => {
     if (!user) return setMsg("You must log in.");
 
-    const res = await axios.post("http://localhost:4001/buyMovies", {
-      userId: user._id,
-      movies: selected.map((m) => m._id),
-    });
-
-    setMsg(res.data.msg + " | Total: $" + res.data.totalPrice);
-
-    setSelected([]);
-    setTotal(0);
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/buyMovies`, {
+        userId: user._id,
+        movies: selected.map((m) => m._id),
+      });
+      setMsg(`${res.data.msg} | Total: $${res.data.totalPrice}`);
+      setSelected([]);
+      setTotal(0);
+    } catch (error) {
+      setMsg(error.response?.data?.msg || "Error processing purchase.");
+    }
   };
 
   return (
