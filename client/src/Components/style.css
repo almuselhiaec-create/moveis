@@ -1,0 +1,708 @@
+/* Header Style */
+.header {
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1f1f1;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ffca28;
+  transform: scale(1.1);
+}
+
+nav a.active {
+  color: #ffa000;
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #00363a;
+  color: #e0f2f1;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bfa5;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #80cbc4;
+  margin: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffca28;
+}
+
+.footer-socials .social-icon {
+  font-size: 24px;
+  margin: 0 15px;
+  color: #f1f1f1;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials .social-icon:hover {
+  transform: scale(1.2);
+  color: #00bfa5;
+}
+/* Home Page Style */
+.home {
+  font-family: "Arial", sans-serif;
+  color: white;
+}
+
+/* Header Section */
+.home-header {
+  background-image: url("https://www.media.hw-static.com/media/2024/12/sonic-the-hedgehog-3-STH3-FF-003K_rgb-2048x858.jpg"); /* Replace with a movie-themed background image */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.7);
+}
+
+.home-header h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.home-header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Featured Movies Section */
+.featured-movies {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.featured-movies h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.movies-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-item {
+  max-width: 250px;
+  text-align: center;
+}
+
+.movie-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie-item img:hover {
+  transform: scale(1.1);
+}
+
+.movie-item h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.about {
+  background-color: #00363a;
+  padding: 40px 20px;
+  text-align: center;
+  color: #80cbc4;
+}
+
+.register,
+.login {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #004d40;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #e0f2f1;
+  text-align: center;
+}
+
+.register h2,
+.login h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffca28;
+}
+
+.register-button,
+.login-button {
+  padding: 12px;
+  background-color: #00bfa5;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.register-button:hover,
+.login-button:hover {
+  background-color: #00796b;
+}
+
+.add-movie {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #004d40;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #e0f2f1;
+  text-align: center;
+}
+
+.add-movie h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffca28;
+}
+
+.message {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #00796b;
+}
+
+.message.error {
+  background-color: #e53935;
+}
+
+.add-movie-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.add-movie-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #80cbc4; /* Light teal */
+}
+
+.add-movie-form input {
+  max-width: 95%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #80cbc4;
+  border-radius: 5px;
+  background-color: #002f34;
+  color: #e0f2f1;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.add-movie-form input:focus {
+  outline: none;
+  border-color: #00bfa5;
+  background-color: #00363a;
+  color: #ffffff;
+}
+
+.add-movie-form input::placeholder {
+  color: #80cbc4;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.add-movie-button {
+  padding: 12px;
+  width: 100%;
+  background-color: #00bfa5;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-movie-button:hover {
+  background-color: #00796b;
+}
+
+/* Error Styling */
+.add-movie-form input.error {
+  border-color: #e53935;
+  background-color: #330000;
+  color: #ffccbc;
+}
+
+.add-movie-form input.error:focus {
+  border-color: #d32f2f;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #80cbc4;
+  border-radius: 5px;
+  background-color: #002f34;
+  color: #e0f2f1;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00bfa5;
+  background-color: #00363a;
+  color: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #80cbc4;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled {
+  background-color: #004d40;
+  color: #b0bec5;
+  cursor: not-allowed;
+  border-color: #80cbc4;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e53935;
+  background-color: #330000;
+  color: #ffccbc;
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+  border-color: #d32f2f;
+}
+
+/* Movies Page */
+.movies-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #004d40;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #e0f2f1;
+}
+
+.movies-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffca28;
+}
+
+.error-message {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #00363a;
+  background-color: white;
+  text-align: center;
+}
+
+.movies-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.movies-table th,
+.movies-table td {
+  border: 1px solid #80cbc4;
+  padding: 10px;
+  text-align: center;
+}
+
+.movies-table th {
+  background-color: #004d40;
+  color: #e0f2f1;
+  font-weight: bold;
+}
+
+.movies-table td {
+  background-color: #00363a;
+  color: #e0f2f1;
+}
+
+.movies-table tr:hover {
+  background-color: #005b57;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.edit-button {
+  background-color: white;
+  color: #00363a;
+}
+
+.edit-button:hover {
+  background-color: #004d40;
+  color: white;
+}
+
+.delete-button {
+  background-color: white;
+  color: #00363a;
+}
+
+.delete-button:hover {
+  background-color: #004d40;
+  color: white;
+}
+
+.movies-table td[colspan="4"] {
+  text-align: center;
+  font-style: italic;
+  color: #80cbc4;
+  background-color: #002f34;
+}
+
+/* Logout Button Style*/
+.logout-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00363a;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #00363a;
+  color: white;
+  transform: scale(1.05);
+}
+
+.logout-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(229, 57, 53, 0.7);
+}
+
+/* Update Movies Style*/
+
+.update-movie {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #004d40;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #e0f2f1;
+  text-align: center;
+}
+
+.update-movie h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffca28;
+}
+
+.message {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #ffa000;
+}
+
+.update-movie-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.update-movie-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e0f2f1;
+}
+
+.update-movie-form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #80cbc4;
+  border-radius: 5px;
+  background-color: #002f34;
+  color: #e0f2f1;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.update-movie-form input:focus {
+  outline: none;
+  border-color: #00bfa5;
+  background-color: #00363a;
+  color: #ffffff;
+}
+
+.update-movie-form input::placeholder {
+  color: #80cbc4;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.update-movie-form .update-movie-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #00bfa5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.update-movie-form .update-movie-button:hover {
+  background-color: #00796b;
+  transform: scale(1.05);
+}
+
+.update-movie-form .update-movie-button:active {
+  background-color: #004d40;
+  transform: scale(0.95);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #efefef;
+}
+.form-group select {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.user-card {
+  width: 320px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #4CAF50;
+}
+
+.user-info {
+  font-size: 16px;
+  color: #444;
+}
+
+.user-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #666;
+}
+
+.user-profile-box {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+  font-size: 1.1rem;
+}
+
+.user-profile-box svg {
+  margin-bottom: 10px;
+}
+
+.action-button {
+  background-color: #4caf50; /* same as your login/register buttons */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.action-button:hover {
+  background-color: #45a049;
+}
+
+.action-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.buy-section {
+  margin-top: 20px;
+}
+
+.buy-button {
+  background-color: #157137;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.purchase-summary {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.purchase-summary h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.purchase-summary p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.purchase-summary ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: black;
+}
+
+.purchase-summary li {
+  padding: 5px 0;
+  border-bottom: 1px solid #853a3a;
+  color: black;
+}
+
+.purchase-summary li:last-child {
+  border-bottom: none;
+}
